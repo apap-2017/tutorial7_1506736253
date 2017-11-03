@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View Student by NPM</title>
+             <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title th:replace="fragments/fragment :: title"></title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" />
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    	<div th:replace="fragments/fragment :: header"></div>
+        
+        
+        <div class="container"><br/>
+       	<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
+       	<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
+       	<h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3>
+       	<h3>Kuliah Yang Diambil</h3>
+       	<ul th:each="course,iterationStatus: ${student.courses}">
+       		<li th:text="${course.name}+' - '+${course.credits}+' sks '">Nama Kuliah -X SKS
+       		</li>
+       	</ul>
+       	</div>
+    </body>
+</html>
+
