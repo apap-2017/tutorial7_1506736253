@@ -1,7 +1,5 @@
 package com.example.dao;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
-
 import java.util.Arrays;
 import java.util.List;
 

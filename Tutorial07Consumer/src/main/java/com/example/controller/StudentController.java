@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import com.example.model.StudentModel;
-import com.example.service.CourseService;
 import com.example.service.StudentService;
 
 @Controller
